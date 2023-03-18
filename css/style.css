@@ -12,8 +12,9 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 400;
+    overflow: hidden;
 }
 
 a {
@@ -38,6 +39,7 @@ img {
 
 .container {
     max-width: 1276px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -75,9 +77,6 @@ img {
     align-items: center;
     justify-content: space-between;
 }
-
-.header-flex-logo {}
-
 
 .header-flex-nav {
     padding-left: 230px;
@@ -216,6 +215,7 @@ img {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
+    cursor: pointer;
 }
 
 /* -------------projects */
@@ -290,7 +290,6 @@ img {
 
 .item-p {
     padding-top: 16px;
-    font-family: 'Playfair Display';
     font-size: 17px;
     line-height: 20px;
 }
@@ -341,10 +340,6 @@ img {
     padding-top: 20px;
 }
 
-.header-flex-logo {}
-
-.text-h2 {}
-
 .footer-h3 {
     font-family: 'Inter';
     font-style: normal;
@@ -352,8 +347,6 @@ img {
     font-size: 24px;
     line-height: 29px;
 }
-
-.text-p {}
 
 .footer-p {
     font-family: 'Inter';
@@ -368,4 +361,74 @@ img {
 
 .footer-socio img {
     margin-right: 30px;
+}
+
+/* -----------------media */
+@media screen and (max-width:768px) {
+    .header-flex-nav {
+        display: none;
+    }
+
+    .proj-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .text-block {
+        width: 100%;
+    }
+
+    .third iframe,
+    .projects,
+    .header,
+    .testimonial {
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .testimonial {
+        width: 100%;
+    }
+
+    .test-flex-item {
+        padding-top: 20px;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .item-img img {
+        width: 100%;
+    }
+
+    .item-content {
+        flex: 1;
+    }
+
+    .about {
+        padding-top: 0;
+    }
+
+    .services-flex,
+    .test-flex,
+    .about-flex,
+    .footer-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-flex-item.first {
+        margin-right: 0;
+        padding: 10px 20px 0;
+    }
+
+    .footer-flex-item {
+        text-align: center;
+    }
+
+    .footer-p {
+        margin-bottom: 10px;
+    }
+
 }
